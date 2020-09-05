@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './app.css';
+import Datatable from './components/datatable';
+// import Button from './button';
+// import Fab from './fab';
+import Modal from './components/modal';
+import { BrowserRouter as Router} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class app extends Component {
+  render() {
+    console.log("Host URL"+process.env.PUBLIC_URL);
+    return (
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="App">
+        <header className="App-header">            
+          <img src="logosponte.png" className="App-logo" alt="logo" />        
+        </header> 
+        <Datatable className="data-table"/>
+        <Modal/>        
+      </div>
+     </Router>
+    );
+  }
 }
 
-export default App;
+export default app;

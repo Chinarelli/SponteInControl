@@ -1,0 +1,9 @@
+.ModalComp {
+    position: relative;
+}
+
+.ButtonClose {
+    position: relative;
+    left: 215px;
+    top: 5px;    
+}
